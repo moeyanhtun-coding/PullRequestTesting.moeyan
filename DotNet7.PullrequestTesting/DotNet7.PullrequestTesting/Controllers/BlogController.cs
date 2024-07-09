@@ -13,5 +13,10 @@ namespace DotNet7.PullrequestTesting.Controllers
         {
             return Ok("This is testing");
         }
+        [HttpGet]
+        public async Task<IActionResult> GetBlogs()
+        {
+            return Ok("This is testing");
+        }
     }
 }
