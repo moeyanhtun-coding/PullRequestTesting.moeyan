@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DotNet7.PullrequestTesting.Controllers
@@ -7,5 +8,10 @@ namespace DotNet7.PullrequestTesting.Controllers
     [ApiController]
     public class BlogController : ControllerBase
     {
+        [HttpGet]
+        public async Task<IActionResult> GetBlog()
+        {
+            return Ok("This is testing");
+        }
     }
 }
